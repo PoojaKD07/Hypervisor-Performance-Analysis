@@ -45,25 +45,22 @@ The maximum latency was lower in the Proxmox run by approximately 76% relative t
 
 **Caution:** Maximum latency is particularly sensitive to transient system activity, scheduling and other environmental effects. It should not be treated as a standalone measure of hypervisor performance.
 
-## 3. What can be concluded
+## 3. Performance Interpretation and Limitations
 
-The supplied runs show:
+### Observed Results
 
-1. Higher Sysbench throughput for the Proxmox VM.
-2. Lower average latency for the Proxmox VM.
-3. Lower maximum latency for the Proxmox run.
-4. Nearly identical total benchmark duration.
+The observed results show that the Proxmox VE configuration achieved **1,749.16 events/sec**, while VMware Workstation achieved **1,460.03 events/sec**.
 
-## 4. What cannot be concluded
+The average latency was **0.57 ms** for Proxmox VE and **0.68 ms** for VMware Workstation.
 
-The data does **not** justify the statement:
+The total execution times were approximately **10 seconds** for both configurations.
 
-> "Type-1 hypervisors are always faster than Type-2 hypervisors."
+These results represent the performance observed in the tested configurations using the same Sysbench CPU workload.
 
-The experiment does not isolate hypervisor type because the underlying CPU environments shown in the evidence are different.
+### Limitations
 
-## 5. Evaluator-facing interpretation
+The guest VM resource allocations were kept equivalent, with **2 vCPU, 2 GB RAM and 20 GB virtual disk** for both configurations.
 
-A technically careful conclusion is:
+However, the underlying host CPU environments shown in the experimental evidence were not identical. Therefore, the observed performance difference cannot be attributed to hypervisor type alone.
 
-> "With equivalent guest resource allocations and the same Sysbench CPU workload, the recorded Proxmox configuration achieved 1,749.16 events/sec compared with 1,460.03 events/sec for VMware Workstation. Average latency was 0.57 ms versus 0.68 ms. These are the observed results for the tested environments. Since the underlying host CPU environments were not identical, the results should not be interpreted as a controlled measurement of hypervisor overhead alone."
+The results should therefore be interpreted as the performance observed for the tested configurations rather than as a universal statement about Type-1 and Type-2 hypervisors.
