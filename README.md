@@ -185,7 +185,5 @@ Do not compare only one number. Read throughput and latency together and conside
 
 Under the supplied experimental runs, Proxmox VE produced higher Sysbench CPU throughput and lower average latency than VMware Workstation. However, the underlying CPU environments differ, so the result should be reported as an observation from this lab setup rather than a universal statement about Type-1 versus Type-2 hypervisors.
 
-## 11. Academic integrity / evidence note
 
-All numerical results in this repository are transcribed from the supplied experiment screenshots. No benchmark values have been fabricated or artificially improved.
 
