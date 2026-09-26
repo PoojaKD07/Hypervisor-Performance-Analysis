@@ -135,9 +135,6 @@ The evidence includes `lscpu`, memory/disk checks, Sysbench output and other VM 
 
 ## 8. Reproducibility
 
- 
-
-### What it will look like
 
 **Verify Ubuntu OS**  
 `hostnamectl`
