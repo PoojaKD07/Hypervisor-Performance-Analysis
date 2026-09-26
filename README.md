@@ -135,35 +135,41 @@ The evidence includes `lscpu`, memory/disk checks, Sysbench output and other VM 
 
 ## 8. Reproducibility
 
- # OS verification
-hostnamectl
+ 
 
-# CPU verification
-lscpu
+### What it will look like
 
-# Memory verification
-free -h
+**Verify Ubuntu OS**  
+`hostnamectl`
 
-# Disk verification
-df -h
+**Verify CPU configuration**  
+`lscpu`
 
-# Resource monitoring
-top
+**Verify memory**  
+`free -h`
 
-# Update packages
-sudo apt update
+**Verify disk space**  
+`df -h`
 
-# Install Sysbench
-sudo apt install sysbench -y
+**Monitor system resources**  
+`top`
 
-# Check Sysbench
-sysbench --version
+**Update Ubuntu packages**  
+`sudo apt update`
 
-# Run CPU benchmark
-sysbench cpu --cpu-max-prime=20000 run
+**Install Sysbench**  
+`sudo apt install sysbench -y`
 
-# Shut down VM
-sudo poweroff
+**Verify Sysbench installation**  
+`sysbench --version`
+
+**Run CPU performance benchmark**  
+`sysbench cpu --cpu-max-prime=20000 run`
+
+**Shut down the virtual machine**  
+`sudo poweroff`
+
+This is the correct Markdown structure if you want the **description lighter and the actual command darker**, while keeping the typography consistent.
 
  
 
