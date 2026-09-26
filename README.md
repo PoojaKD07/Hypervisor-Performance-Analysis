@@ -134,30 +134,37 @@ The complete evidence is available in:
 The evidence includes `lscpu`, memory/disk checks, Sysbench output and other VM observations.
 
 ## 8. Reproducibility
-
-Inside each Ubuntu VM:
-
-```bash
+# Verify the Ubuntu operating system, hostname, kernel version and architecture
 hostnamectl
+
+# Verify CPU architecture, number of CPUs, CPU model, cores and virtualization information
 lscpu
+
+# Verify total, used, free and available memory
 free -h
+
+# Verify filesystem, total disk capacity, used space and available space
 df -h
+
+# Monitor CPU utilization, memory utilization, running processes and load average
 top
-```
 
-Install Sysbench:
-
-```bash
+# Update the Ubuntu package repository
 sudo apt update
+
+# Install Sysbench for CPU performance analysis
 sudo apt install sysbench -y
+
+# Verify that Sysbench is installed and display its version
 sysbench --version
-```
 
-Run the benchmark:
-
-```bash
+# Run the CPU performance benchmark with a maximum prime number of 20000
 sysbench cpu --cpu-max-prime=20000 run
-```
+
+# Shut down the Ubuntu virtual machine after completing the experiment
+sudo poweroff
+
+
 
 Record:
 
